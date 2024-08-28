@@ -2,7 +2,13 @@
 
 This repository contains the learning outcome of Rust Programming Language.
 
-## Installation
+# Table of Contents
+1. [Installation](#Installation)
+2. [Check_Version](#Check-Version)
+3. [Write your first Rust Program](#Write your first Rust Program)
+
+
+# Installation
 
 For a linux based terminal, enter the following command in your terminal:
 
@@ -18,7 +24,7 @@ source ./~bashrc
 ```
 The changes will be now reflected to your computer.
 
-## Check Version
+# Check-version
 
 Now check the version using the command:
 
@@ -28,7 +34,7 @@ $ rustc --version
 
 Let's go now you are ready to write code in Rust.
 
-## Write your first Rust Program
+# Write your first Rust Program
 ```sh
 mkdir rust_program
 cd rust_program
