@@ -7,7 +7,7 @@ This repository contains the learning outcome of Rust Programming Language.
 2. [Check Version](#Check-Version)
 3. [Write your first Rust Program](#Write-your-first-Rust-Program)
 4. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
-5. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
+5. [Rust Variables And Mutability](#Rust-Variables-And-Mutability)
 
 
 # Installation
@@ -111,7 +111,8 @@ After we build and run this function again we will get the output:
     Please input your guess: 
 ```
 
-# Rust Variables
+# Rust Variables And Mutability
+
 By default, variables in Rust are immutable. Let us create a cargo named variables to dive into rust variables.
 ```sh
 cargo new variables
@@ -160,7 +161,8 @@ fn main() {
 }
 ```
 
-Alternatively, you might consider initializing a new variable: either with a new bound name or (by shadowing) with the bound name of your
+## Shadowing
+Alternatively, you might consider initializing a new variable: either with a new bound name or (by ```shadowing```) with the bound name of your
 existing variable. For example:
 
 ```rs
@@ -179,4 +181,20 @@ Compiling variables v0.1.0 (/home/rohan/rush-projects/rust/variables)
      Running `target/debug/variables`
 The value of x is: 5
 The value of x is: 6
+```
+
+## Constant Variables
+Like immutable variables, constants are values that are bound to a name and are not allowed to change, but there are a few differences between constants and variables.
+
+You are not allowed to use ```mut``` with ```const```.
+
+Constants can be declared in any scope, including the global scope, which makes them useful for values that many parts of code need to know about.
+
+The last difference is that constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.
+
+Constant are valid for the entire time the program runs.
+
+Example:
+```rs
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
