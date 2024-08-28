@@ -56,3 +56,49 @@ You can see the output as:
 ```sh
 Hello, World!
 ```
+
+## Building Rust app with Cargo
+
+Let's create a Rust app with cargo that takes user input and gives output of the number user guesses.
+
+```sh
+cargo new guessing_game
+```
+
+Then to build the cargo app:
+```sh
+cd guessing_game
+cargo build
+```
+
+Now you can run the app using:
+```sh
+cargo run
+```
+
+Lets write the main function for guessing game:
+
+```rs
+use std::io;
+
+fn main() {
+    println!("Guess the number");
+    println!("Please input your guess: ");
+
+	let mut guess = String::new();
+	
+	io::stdin()
+		.read_line(&mut guess)
+		.expect("Failed to read the line.");
+
+	println!("You guessed: {} ", guess);
+}
+```
+After we build and run this function again we will get the output:
+```sh
+    Compiling guessing_game v0.1.0 (/home/rohan/rush-projects/rust/guessing_game)
+        Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.91s
+        Running `target/debug/guessing_game`
+    Guess the number
+    Please input your guess: 
+```
