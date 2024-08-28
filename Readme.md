@@ -5,7 +5,7 @@ This repository contains the learning outcome of Rust Programming Language.
 # Table of Contents
 1. [Installation](#Installation)
 2. [Check_Version](#Check-Version)
-3. [Write your first Rust Program](#Write your first Rust Program)
+3. [Write your first Rust Program](#Write-your-first-Rust-Program)
 
 
 # Installation
