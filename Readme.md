@@ -4,8 +4,9 @@ This repository contains the learning outcome of Rust Programming Language.
 
 # Table of Contents
 1. [Installation](#Installation)
-2. [Check_Version](#Check-Version)
+2. [Check Version](#Check-Version)
 3. [Write your first Rust Program](#Write-your-first-Rust-Program)
+3. [Building Rust app with Cargo](#Cargo_rust_app_building)
 
 
 # Installation
@@ -24,7 +25,7 @@ source ./~bashrc
 ```
 The changes will be now reflected to your computer.
 
-# Check-version
+# Check Version
 
 Now check the version using the command:
 
@@ -63,7 +64,7 @@ You can see the output as:
 Hello, World!
 ```
 
-## Building Rust app with Cargo
+# Building Rust app with Cargo
 
 Let's create a Rust app with cargo that takes user input and gives output of the number user guesses.
 
