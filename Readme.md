@@ -6,7 +6,7 @@ This repository contains the learning outcome of Rust Programming Language.
 1. [Installation](#Installation)
 2. [Check Version](#Check-Version)
 3. [Write your first Rust Program](#Write-your-first-Rust-Program)
-3. [Building Rust app with Cargo](#Cargo_rust_app_building)
+3. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
 
 
 # Installation
