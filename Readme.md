@@ -1,4 +1,4 @@
-## Learning Rust
+# Learning Rust
 
 This repository contains the learning outcome of Rust Programming Language.
 
@@ -6,7 +6,8 @@ This repository contains the learning outcome of Rust Programming Language.
 1. [Installation](#Installation)
 2. [Check Version](#Check-Version)
 3. [Write your first Rust Program](#Write-your-first-Rust-Program)
-3. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
+4. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
+5. [Building Rust app with Cargo](#Building-Rust-app-with-Cargo)
 
 
 # Installation
@@ -108,4 +109,74 @@ After we build and run this function again we will get the output:
         Running `target/debug/guessing_game`
     Guess the number
     Please input your guess: 
+```
+
+# Rust Variables
+By default, variables in Rust are immutable. Let us create a cargo named variables to dive into rust variables.
+```sh
+cargo new variables
+```
+Now change the directory to variables:
+```sh
+cd variables
+```
+Now inside of ```src/main.rs```, if you write the code as:
+```rs
+fn main() {
+    let x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+}
+```
+You will encounter the following error while performing ```cargo run```:
+```sh
+Compiling variables v0.1.0 (/home/rohan/rush-projects/rust/variables)
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> src/main.rs:4:5
+  |
+2 |     let x = 5;
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: consider making this binding mutable: `mut x`
+3 |     println!("The value of x is: {x}");
+4 |     x = 6;
+  |     ^^^^^ cannot assign twice to immutable variable
+
+For more information about this error, try `rustc --explain E0384`.
+error: could not compile `variables` (bin "variables") due to 1 previous error
+```
+
+To fix this error, add the keyword ```mut``` after the keyword ```let``` when declaring the variable. For
+example:
+
+```rs
+fn main() {
+    let mut x = 5;
+    println!("The value of x is: {x}");
+    x = 6;
+    println!("The value of x is: {x}");
+}
+```
+
+Alternatively, you might consider initializing a new variable: either with a new bound name or (by shadowing) with the bound name of your
+existing variable. For example:
+
+```rs
+fn main() {
+    let x = 5;
+    println!("The value of x is: {x}");
+    let x = 6;
+    println!("The value of x is: {x}");
+}
+```
+
+This will give the output as:
+```sh
+Compiling variables v0.1.0 (/home/rohan/rush-projects/rust/variables)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.21s
+     Running `target/debug/variables`
+The value of x is: 5
+The value of x is: 6
 ```
