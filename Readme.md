@@ -390,3 +390,16 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 # Data Types
 Rust is a statically typed language (This means, at the compile time it must know the data types of every variable). Every Value in Rust is of a certain data type.
 Two data subtypes are: ```scalar``` and ```compound```.
+
+## Scalar Types
+
+```Integer```
+```sh
+Length	Signed	Unsigned
+8-bit	i8	u8
+16-bit	i16	u16
+32-bit	i32	u32
+64-bit	i64	u64
+128-bit	i128	u128
+arch	isize	usize
+```
