@@ -395,7 +395,9 @@ Two data subtypes are: ```scalar``` and ```compound```.
 A scalar type represents a single value. Rust has ```four``` primary scalar types:
 
 
-```1. Integer```
+```1. Integer```:
+
+
 An ```integer``` is a number without a fractional component.
 ```unsigned integer``` start with ```u``` (```signed integer``` types start with ```i``` instead of ```u```) that takes up ```32 bits``` of space.
 ```Signed``` and ```unsigned``` refer to whether it’s possible for the number to be negative. In other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).
@@ -462,5 +464,24 @@ fn main() {
         Some(result) => println!("Result: {}", result),
         None => println!("Overflow occurred"),
     }
+}
+```
+
+ ```2. Floating Point Types```:
+
+
+Rust also has two primitive types for floating-point numbers, which are numbers with decimal points.
+Rust’s floating-point types are ```f32``` and ```f64```, which are ```32 bits``` and ```64 bits``` in size, respectively. 
+By default, the floating point types are of ```64 bits``` in Rust Programming Language.
+
+The ```f32``` type is a ```single-precision float```, and ```f64``` has ```double precision```.
+
+```rs
+Example:
+
+fn main() {
+    let x = 1.0; // f64 ie 64 bits floating point
+
+    let y: f32 = 5.0; // f32 ie 32 bits floating point
 }
 ```
