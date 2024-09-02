@@ -392,8 +392,11 @@ Rust is a statically typed language (This means, at the compile time it must kno
 Two data subtypes are: ```scalar``` and ```compound```.
 
 ## Scalar Types
-
+A scalar type represents a single value. Rust has ```four``` primary scalar types:
 ```Integer```
+An ```integer``` is a number without a fractional component.
+```unsigned integer``` start with ```u``` (```signed integer``` types start with ```i``` instead of ```u```) that takes up ```32 bits``` of space.
+```Signed``` and ```unsigned``` refer to whether it’s possible for the number to be negative. In other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned).
 ```sh
 Length	Signed	Unsigned
 8-bit	i8	u8
@@ -403,3 +406,4 @@ Length	Signed	Unsigned
 128-bit	i128	u128
 arch	isize	usize
 ```
+Each ```signed``` variant can store numbers from ```-(2n - 1)``` to ```2n - 1 - 1``` inclusive, where ```n``` is the number of bits that variant uses. So an ```i8``` can store numbers from ```-(27)``` to ```27 - 1```, which equals ```-128 to 127```. ```Unsigned``` variants can store numbers from ```0``` to ```2n - 1```, so a ```u8``` can store numbers from ```0 to 28 - 1```, which equals ```0 to 255```.
