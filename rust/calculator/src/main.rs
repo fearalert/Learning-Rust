@@ -62,3 +62,44 @@ fn input_parser() -> f64{
 
     return x;
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_add() {
+        assert_eq!(perform_operation(1.0,-2.0,1), -1.0);
+    }
+
+    #[test]
+    fn test_subtract() {
+        assert_eq!(perform_operation(1.0,-2.0,2), 3.0);
+    }
+
+    #[test]
+    fn test_multiply() {
+        assert_eq!(perform_operation(1.0,-2.0,3), -2.0);
+    }
+
+    #[test]
+    fn test_divide() {
+        assert_eq!(perform_operation(1.0,-2.0, 4), -0.5);
+    }
+
+    #[test]
+    fn test_invalid_operator() {
+        assert!(f64::is_nan(perform_operation(10.0, 2.0, 5)));
+    }
+
+    fn perform_operation(a: f64, b: f64, op: i32) -> f64 {
+        match op {
+            1 => a + b,
+            2 => a - b,
+            3 => a * b,
+            4 => a / b,
+            _ => f64::NAN,
+        }
+    }
+}
