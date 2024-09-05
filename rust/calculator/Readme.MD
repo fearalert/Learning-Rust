@@ -230,6 +230,6 @@ Please enter the operator
 Select the number associated with the operations above.
 3
 The result is 25
+```
 
 ![alt text](image-2.png)
-```
